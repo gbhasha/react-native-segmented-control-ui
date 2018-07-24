@@ -12,28 +12,25 @@ class ExampleMain extends Component {
         this.state = {
             selectedIndex: 0,
             badgesStyleIndex: 0,
-            customStyleIndex: 0,
+            customStyleIndex: 0
         }
     }
 
     handleSingleIndexSelect = (index) => {
         this.setState({
-            ...this.state,
-            selectedIndex: index,
+            selectedIndex: index
         });
     }
 
     handleBadgesSelect = (index) => {
         this.setState({
-            ...this.state,
-            badgesStyleIndex: index,
+            badgesStyleIndex: index
         });
     }
 
     handleCustomIndexSelect = (index) => {
         this.setState({
-            ...this.state,
-            customStyleIndex: index,
+            customStyleIndex: index
         });
     }
 

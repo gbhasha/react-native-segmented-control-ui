@@ -10,7 +10,12 @@
 A react native component similar to iOS SegmentedControl, Primarily built to support both IOS and Android.
 
 # Example
-To run example
+To run the example
+1. create a symlink package from the root directory, as shown below:
+```shell
+npm link
+```
+2. switch to the example folder and then run `yarn start` command, which would launch the app on simulator using the [expo](https://expo.io/) app
 
 ```shell
 cd Example
@@ -25,19 +30,18 @@ yarn start
 ```javascript
 import SegmentedControlTab from 'react-native-segmented-control-ui'
 
-class ConsumerComponent extends Component {
+const ConsumerComponent extends Component {
 
     constructor(){
       super()
       this.state = {
-        selectedIndex: 0,
+        selectedIndex: 0
       };
     }
 
     handleIndexChange = (index) => {
       this.setState({
-        ...this.state,
-        selectedIndex: index,
+        selectedIndex: index
       });
     }
 

@@ -34,6 +34,19 @@ Updating the `react-native-scripts` dependency of your app should be as simple a
 
 Upgrading to a new version of React Native requires updating the `react-native`, `react`, and `expo` package versions, and setting the correct `sdkVersion` in `app.json`. See the [versioning guide](https://github.com/react-community/create-react-native-app/blob/master/VERSIONS.md) for up-to-date information about package version compatibility.
 
+# Example
+To run this example
+1. create a symlink package from the root directory, as shown below:
+```shell
+npm link
+```
+2. switch to the example folder and then run `yarn start` command, which would launch the app on simulator using the [expo](https://expo.io/) app
+
+```shell
+cd Example
+yarn start
+```
+
 ## Available Scripts
 
 If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
