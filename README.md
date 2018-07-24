@@ -9,6 +9,16 @@
 
 A react native component similar to iOS SegmentedControl, Primarily built to support both IOS and Android.
 
+# Example
+To run example
+
+```shell
+cd Example
+yarn start
+```
+
+
+
 
 ## Usage
 
