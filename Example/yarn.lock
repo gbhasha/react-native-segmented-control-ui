@@ -5549,6 +5549,10 @@ react-native-scripts@1.14.0:
     rimraf "^2.6.1"
     xdl "48.1.4"
 
+react-native-segmented-control-ui@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-segmented-control-ui/-/react-native-segmented-control-ui-1.0.0.tgz#fe7a2227a66f352227463d17d969bfa04456bb24"
+
 react-native-svg-web@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-svg-web/-/react-native-svg-web-1.0.1.tgz#16e1784077b6e5b6c7ebd9c3829e6684211cba99"

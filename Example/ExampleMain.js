@@ -11,6 +11,7 @@ class ExampleMain extends Component {
         super(props);
         this.state = {
             selectedIndex: 0,
+            badgesStyleIndex: 0,
             customStyleIndex: 0,
         }
     }
@@ -19,6 +20,13 @@ class ExampleMain extends Component {
         this.setState({
             ...this.state,
             selectedIndex: index,
+        });
+    }
+
+    handleBadgesSelect = (index) => {
+        this.setState({
+            ...this.state,
+            badgesStyleIndex: index,
         });
     }
 
@@ -43,8 +51,8 @@ class ExampleMain extends Component {
                 <Text style={styles.headerText} >Default segmented with badges</Text>
                 <SegmentedControlTab
                     badges={[1, 2, 3]}
-                    selectedIndex={this.state.selectedIndex}
-                    onTabPress={this.handleSingleIndexSelect} />
+                    selectedIndex={this.state.badgesStyleIndex}
+                    onTabPress={this.handleBadgesSelect} />
                 <View style={styles.Seperator} />
 
                 <Text style={styles.headerText} >Custom segmented control with custom styles</Text>
