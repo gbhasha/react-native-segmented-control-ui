@@ -1,6 +1,6 @@
 {
   "name": "react-native-segmented-control-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SegmentedControl using react-native,support android and ios",
   "main": "index.js",
   "scripts": {
