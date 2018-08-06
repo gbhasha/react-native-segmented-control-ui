@@ -78,7 +78,7 @@ const SegmentedControlTab = ({
     accessibilityLabels,
 }) => {
 
-    const firstTabStyle = [{ borderRightWidth: values.length == 2 ? 1 : 0, borderTopLeftRadius: borderRadius, borderBottomLeftRadius: borderRadius }]
+    const firstTabStyle = [{ borderRightWidth: 0, borderTopLeftRadius: borderRadius, borderBottomLeftRadius: borderRadius}]
     const lastTabStyle = [{ borderLeftWidth: 0, borderTopRightRadius: borderRadius, borderBottomRightRadius: borderRadius }]
 
     return (
@@ -97,9 +97,9 @@ const SegmentedControlTab = ({
                             text={item}
                             textNumberOfLines={textNumberOfLines}
                             onTabPress={(index) => handleTabPress(index, selectedIndex, onTabPress)}
-                            firstTabStyle={index === 0 ? [{ borderRightWidth: 0 }, firstTabStyle] : {}}
-                            lastTabStyle={index === values.length - 1 ? [{ borderLeftWidth: 0 }, lastTabStyle] : {}}
-                            tabStyle={[tabStyle, index !== 0 && index !== values.length - 1 ? { marginLeft: -1 } : {}]}
+                            firstTabStyle={index === 0 ? [firstTabStyle] : {}}
+                            lastTabStyle={index === values.length - 1 ? [lastTabStyle] : {}}
+                            tabStyle={[tabStyle]}
                             activeTabStyle={activeTabStyle}
                             tabTextStyle={tabTextStyle}
                             activeTabTextStyle={activeTabTextStyle}

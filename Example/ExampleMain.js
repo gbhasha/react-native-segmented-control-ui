@@ -39,6 +39,7 @@ class ExampleMain extends Component {
             <View style={styles.container}>
                 <Text style={styles.headerText} >Default segmented control with single selection</Text>
                 <SegmentedControlTab
+                    values={["one", "two"]}
                     selectedIndex={this.state.selectedIndex}
                     tabStyle={styles.tabStyle}
                     activeTabStyle={styles.activeTabStyle}
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
         marginVertical: 24
     },
     tabStyle: {
-        borderColor: '#D52C43'
+        borderColor: '#000000'
     },
     activeTabStyle: {
         backgroundColor: '#D52C43'
