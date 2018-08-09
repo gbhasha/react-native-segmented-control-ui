@@ -13,7 +13,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "reset": "watchman watch-del-all && rm -rf node_modules && rm -rf /tmp/haste-map-react-native-packager-* && rm -rf /tmp/metro-bundler-cache-* && npm install && npm start -- --reset-cache"
   },
   "jest": {
     "preset": "jest-expo"
@@ -21,7 +22,7 @@
   "dependencies": {
     "expo": "^27.0.1",
     "react": "16.3.1",
-    "react-native": "~0.55.2",
-    "react-native-segmented-control-ui": "file:.."
+    "react-native": "^0.55.4",
+    "react-native-segmented-control-ui": "1.0.2"
   }
 }

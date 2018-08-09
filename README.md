@@ -64,18 +64,17 @@ const ConsumerComponent extends Component {
 ------|-------------|----------|-----------
 values | titles of tabs  | `['One', 'Two', 'Three']` | array
 selectedIndex | index of tab item to be selected initially| [0] | number
-selectedIndices |Array of indices of tab items to be selected initially - when multiple prop is true else it will take selectedIndex| [0] | arrayOf(PropTypes.number)
 borderRadius | borderRadius of whole tab | 5 | number
-tabsContainerStyle | external styles can be passed to override the default styles of the segmentedControl wrapper| base styles added in SegmentedControlTab.js  | object(styles)
-tabStyle | external styles can be passed to override the default styles of the tabs| base styles added in SegmentedControlTab.js  | object(styles)
-tabTextStyle | external styles can be passed to override the default styles of the tab title| base styles added in SegmentedControlTab.js  | object(styles)
-activeTabStyle | external styles can be passed to override the default styles of the active tab| base styles added in SegmentedControlTab.js  | object(styles)
-activeTabTextStyle | external styles can be passed to override the default styles of the active tab text| base styles added in SegmentedControlTab.js  | object(styles)
+tabsContainerStyle | external styles can be passed to override the default styles of the segmentedControl wrapper| [tabsContainerStyle](#custom-styling)  | object(styles)
+tabStyle | external styles can be passed to override the default styles of the tabs| [tabStyle](#custom-styling)  | object(styles)
+tabTextStyle | external styles can be passed to override the default styles of the tab title| [tabTextStyle](#custom-styling)  | object(styles)
+activeTabStyle | external styles can be passed to override the default styles of the active tab| [activeTabStyle](#custom-styling)  | object(styles)
+activeTabTextStyle | external styles can be passed to override the default styles of the active tab text| [activeTabTextStyle](#custom-styling)  | object(styles)
 badges | badges values to display  | `[1, 2, 3]` | array
-tabBadgeContainerStyle | external style can be passed to override the default style of the badge container | base styles added in SegmentedControlTab.js  | object(styles)
-activeTabBadgeContainerStyle | external style can be passed to override the default style of the active badge container | base styles added in SegmentedControlTab.js  | object(styles)
-tabBadgeStyle | external style can be passed to override the default style of the badge text | base styles added in SegmentedControlTab.js  | object(styles)
-activeTabBadgeStyle | external style can be passed to override the default style of the active badge text | base styles added in SegmentedControlTab.js  | object(styles)
+tabBadgeContainerStyle | external style can be passed to override the default style of the badge container | [tabBadgeContainerStyle](#custom-styling)  | object(styles)
+activeTabBadgeContainerStyle | external style can be passed to override the default style of the active badge container | [activeTabBadgeContainerStyle](#custom-styling)  | object(styles)
+tabBadgeStyle | external style can be passed to override the default style of the badge text | [tabsContainerStyle](#custom-styling)  | object(styles)
+activeTabBadgeStyle | external style can be passed to override the default style of the active badge text | [activeTabBadgeStyle](#custom-styling)  | object(styles)
 onTabPress | call-back function when a tab is selected | () => {} | func
 allowFontScaling | whether the segment & badge text should allow font scaling (default matches React Native default) | true | bool
 accessible | enables accessibility for each tab | true | bool
@@ -97,40 +96,52 @@ accessibilityLabels | Reads out the given text on each tab press when voice over
 
       const styles = StyleSheet.create({
           tabsContainerStyle: {
-            //custom styles
+              backgroundColor: 'transparent',
+              flexDirection: 'row',
           },
           tabStyle: {
-            //custom styles
-            },
-          tabTextStyle: {
-            //custom styles
+              paddingVertical: 5,
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderColor: '#0076FF',
+              borderWidth: 1,
+              backgroundColor: 'white',
           },
           activeTabStyle: {
-            //custom styles
-            },
+              backgroundColor: '#0076FF'
+          },
+          tabTextStyle: {
+              color: '#0076FF'
+          },
           activeTabTextStyle: {
-            //custom styles
+              color: 'white'
           },
           tabBadgeContainerStyle: {
-            //custom styles
+              borderRadius: 20,
+              backgroundColor: 'red',
+              paddingLeft: 5,
+              paddingRight: 5,
+              marginLeft: 5,
+              marginBottom: 3
           },
           activeTabBadgeContainerStyle: {
-            //custom styles
+              backgroundColor: 'white'
           },
           tabBadgeStyle: {
-            //custom styles
+              color: 'white',
+              fontSize: 11,
+              fontWeight: 'bold'
           },
           activeTabBadgeStyle: {
-            //custom styles
+              color: 'black'
           }
 
       })
 
   ```
 
-## P.S.
-🙏 credits to all the other devs who had built the similar concept, had referred some of the their components on the github, to get a fair idea 💡 to build this.😊
-If you have any idea in implementing this further, let me know or you can update it and raise a PR.😊🚀
-
 ## License
 *MIT*
+
+[abcd] : <http://ggp.com>
