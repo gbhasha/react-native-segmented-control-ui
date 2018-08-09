@@ -12,7 +12,8 @@ class ExampleMain extends Component {
         this.state = {
             selectedIndex: 0,
             badgesStyleIndex: 0,
-            customStyleIndex: 0
+            customStyleIndex: 0,
+            customStyleIndex1: 0
         }
     }
 
@@ -34,41 +35,65 @@ class ExampleMain extends Component {
         });
     }
 
+    handleCustomIndexSelect1 = (index) => {
+        this.setState({
+            customStyleIndex1: index
+        });
+    }
+
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.headerText} >Default segmented control with single selection</Text>
-                <SegmentedControlTab
-                    values={["one", "two"]}
-                    selectedIndex={this.state.selectedIndex}
-                    tabStyle={styles.tabStyle}
-                    activeTabStyle={styles.activeTabStyle}
-                    onTabPress={this.handleSingleIndexSelect} />
-                <View style={styles.Seperator} />
+            <View style={{flex: 1}}>
 
-                <Text style={styles.headerText} >Default segmented with badges</Text>
-                <SegmentedControlTab
-                    badges={[1, 2, 3]}
-                    selectedIndex={this.state.badgesStyleIndex}
-                    onTabPress={this.handleBadgesSelect} />
-                <View style={styles.Seperator} />
+                <View style={[styles.container, {borderLeftColor: '#8BC34A'}]}>
+                    <Text style={[styles.headerText]} >Default segmented control</Text>
+                    <SegmentedControlTab
+                        values={["one", "two", "three"]}
+                        selectedIndex={this.state.selectedIndex}
+                        onTabPress={this.handleSingleIndexSelect} />
+                </View>
 
-                <Text style={styles.headerText} >Custom segmented control with custom styles</Text>
-                <SegmentedControlTab
-                    values={['one', 'two']}
-                    selectedIndex={this.state.customStyleIndex}
-                    onTabPress={this.handleCustomIndexSelect}
-                    borderRadius={0}
-                    tabsContainerStyle={{ height: 50, backgroundColor: '#F2F2F2' }}
-                    tabStyle={{ backgroundColor: '#F2F2F2', borderWidth: 0, borderColor: 'transparent' }}
-                    activeTabStyle={{ backgroundColor: 'white', marginTop: 2 }}
-                    tabTextStyle={{ color: '#444444', fontWeight: 'bold' }}
-                    activeTabTextStyle={{ color: '#888888' }} />
-                {this.state.customStyleIndex === 0 &&
-                    <Text style={styles.tabContent} > Tab one</Text>}
-                {this.state.customStyleIndex === 1 &&
-                    <Text style={styles.tabContent} > Tab two</Text>}
+                <View style={[styles.container, {borderLeftColor: '#CDDC39'}]}>
+                    <Text style={[styles.headerText]} >Default segmented with badges</Text>
+                    <SegmentedControlTab
+                        badges={[1, 2, 3]}
+                        selectedIndex={this.state.badgesStyleIndex}
+                        onTabPress={this.handleBadgesSelect} />
+                </View>
 
+                {/* <View style={[styles.container, {borderLeftColor: '#FFEB3B'}]}>
+                    <Text style={[styles.headerText]} >Default segmented with icons</Text>
+                    <SegmentedControlTab
+                        badges={[1, 2, 3]}
+                        selectedIndex={this.state.badgesStyleIndex}
+                        onTabPress={this.handleBadgesSelect} />
+                </View> */}
+
+                <View style={[styles.container, {borderLeftColor: '#FFC107'}]}>
+                    <Text style={[styles.headerText]}>Segmented control  with custom styles </Text>
+                    <SegmentedControlTab
+                        values={["one", "two", "three"]}
+                        selectedIndex={this.state.customStyleIndex1}
+                        tabsContainerStyle={styles.tabsContainerStyle}
+                        tabTextStyle={styles.tabTextStyle}
+                        tabStyle={styles.tabStyle}
+                        activeTabStyle={styles.activeTabStyle}
+                        onTabPress={this.handleCustomIndexSelect1} />
+                </View>
+
+                <View style={[styles.container, {borderLeftColor: '#FF9800'}]}>
+                    <Text style={styles.headerText} >Segmented control with custom styles</Text>
+                    <SegmentedControlTab
+                        values={['one', 'two', 'three']}
+                        selectedIndex={this.state.customStyleIndex}
+                        onTabPress={this.handleCustomIndexSelect}
+                        borderRadius={0}
+                        tabsContainerStyle={{ height: 50, backgroundColor: '#F2F2F2', borderWidth: 0, borderColor: 'transparent' }}
+                        tabStyle={{ paddingVertical: 0, backgroundColor: '#F2F2F2', borderLeftWidth: 0, borderLeftColor: 'transparent' }}
+                        activeTabStyle={{ backgroundColor: 'white', borderBottomWidth: 5, borderBottomColor: '#218c74' }}
+                        tabTextStyle={{ color: '#444444', fontWeight: 'bold' }}
+                        activeTabTextStyle={{ color: '#666666' }} />
+                </View>
             </View>
         );
     }
@@ -79,8 +104,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        marginHorizontal: 10,
+        marginVertical: 5,
+        padding: 10,
+        borderLeftWidth: 8,
         backgroundColor: 'white',
-        padding: 10
     },
     tabViewText: {
         color: '#444444',
@@ -108,17 +136,21 @@ const styles = StyleSheet.create({
         marginHorizontal: -10,
         alignSelf: 'stretch',
         borderTopWidth: 1,
-        borderTopColor: '#888888',
+        borderTopColor: '#666666',
         marginVertical: 24
     },
+    tabsContainerStyle: {
+        borderColor: '#706fd3'
+    },
     tabStyle: {
-        borderColor: '#000000'
+        borderLeftColor: '#706fd3',
+        backgroundColor: 'transparent',
     },
     activeTabStyle: {
-        backgroundColor: '#D52C43'
+        backgroundColor: '#33d9b2'
     },
     tabTextStyle: {
-        color: '#D52C43'
+        color: '#706fd3'
     },
 
 })

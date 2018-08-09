@@ -78,12 +78,12 @@ const SegmentedControlTab = ({
     accessibilityLabels,
 }) => {
 
-    const firstTabStyle = [{ borderRightWidth: 0, borderTopLeftRadius: borderRadius, borderBottomLeftRadius: borderRadius}]
-    const lastTabStyle = [{ borderLeftWidth: 0, borderTopRightRadius: borderRadius, borderBottomRightRadius: borderRadius }]
-
+    const firstTabStyle = [{ borderLeftWidth: 0, borderTopWidth: 0}]
+    const lastTabStyle = [{ }]
+    const containerStyle = [{borderRadius: borderRadius, overflow: 'hidden'}]
     return (
         <View
-            style={[styles.tabsContainerStyle, tabsContainerStyle]}
+            style={[styles.tabsContainerStyle, containerStyle, tabsContainerStyle]}
             removeClippedSubviews={false}>
             {
                 values.map((item, index) => {
@@ -187,21 +187,23 @@ const styles = StyleSheet.create({
     tabsContainerStyle: {
         backgroundColor: 'transparent',
         flexDirection: 'row',
+        borderColor: '#007AFF',
+        borderWidth: 1,
     },
     tabStyle: {
         paddingVertical: 5,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#0076FF',
-        borderWidth: 1,
+        borderLeftColor: '#007AFF',
+        borderLeftWidth: 1,
         backgroundColor: 'white',
     },
     activeTabStyle: {
-        backgroundColor: '#0076FF'
+        backgroundColor: '#007AFF'
     },
     tabTextStyle: {
-        color: '#0076FF'
+        color: '#007AFF'
     },
     activeTabTextStyle: {
         color: 'white'
