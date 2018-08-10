@@ -1,27 +1,13 @@
 # react-native-segmented-control-ui(for Android/iOS) 🚀
 [![npm](https://img.shields.io/npm/v/react-native-segmented-control-ui.svg?style=flat-square "npm version")](https://www.npmjs.com/package/react-native-segmented-control-ui)
 [![Monthly Downloads](https://img.shields.io/npm/dm/react-native-segmented-control-ui.svg?style=flat-square )](https://npmjs.org/package/react-native-segmented-control-ui)
-[![GitHub stars](https://img.shields.io/github/stars/kirankalyan5/react-native-segmented-control-ui.svg?style=flat)](https://npmjs.org/package/react-native-segmented-control-ui)
+
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square )](https://github.com/gbhasha/react-native-segmented-control-ui/pulls)
 
 [![NPM](https://nodei.co/npm/react-native-segmented-control-ui.png?compact=true)](https://npmjs.org/package/react-native-segmented-control-ui)
 
 
-A react native component similar to iOS SegmentedControl, Primarily built to support both IOS and Android.
-
-# Example
-To run the example
-1. create a symlink package from the root directory, as shown below:
-```shell
-npm link
-```
-2. switch to the example folder and then run `yarn start` command, which would launch the app on simulator using the [expo](https://expo.io/) app
-
-```shell
-cd Example
-yarn start
-```
-
+An extendable tab components for React Native similar to iOSSegmentedControl, Primarily built to support both iOS and Android.
 
 
 
@@ -59,7 +45,8 @@ const ConsumerComponent extends Component {
 }
 ```
 
-## Props
+## API
+
  Name | Description | Default | Type
 ------|-------------|----------|-----------
 values | titles of tabs  | `['One', 'Two', 'Three']` | array
@@ -141,7 +128,13 @@ accessibilityLabels | Reads out the given text on each tab press when voice over
 
   ```
 
+## Try it out
+
+You can try it out with Exponent [here](https://expo.io/@gbhasha/react-native-segmemted-control-ui).
+
+### Example
+
+Look at the [`example`](https://github.com/gbhasha/react-native-segmented-control-ui/tree/master/Example) folder to run the expo app locally.
+
 ## License
 *MIT*
-
-[abcd] : <http://ggp.com>

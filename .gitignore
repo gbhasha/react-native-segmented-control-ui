@@ -1,0 +1,16 @@
+# OSX
+#
+.DS_Store
+
+# XDE
+.expo/
+
+# VSCode
+.vscode/
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log

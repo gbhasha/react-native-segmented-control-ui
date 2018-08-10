@@ -1,8 +1,11 @@
 {
   "name": "react-native-segmented-control-ui",
   "version": "1.0.2",
-  "description": "SegmentedControl using react-native,support android and ios",
-  "main": "index.js",
+  "description": "Segmented Control component for React Native",
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,13 +15,27 @@
   },
   "keywords": [
     "SegmentedControl",
+    "segmented-control",
+    "segmented-control-tab",
+    "segmented-control-ui",
     "react-native",
+    "react-native-component",
+    "react-native",
+    "ios",
+    "android",
+    "tab",
     "ui-components"
   ],
-  "author": "Galeel Bhasha Satthar <gbhasha@gmail.com>",
+  "author": "Galeel Bhasha Satthar <gbhasha@gmail.com> (https://github.com/gbhasha/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gbhasha/react-native-segmented-control-ui/issues"
   },
-  "homepage": "https://github.com/gbhasha/react-native-segmented-control-ui#readme"
+  "homepage": "https://github.com/gbhasha/react-native-segmented-control-ui#readme",
+  "peerDependencies": {
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
 }
