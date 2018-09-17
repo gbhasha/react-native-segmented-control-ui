@@ -19,16 +19,16 @@ import SegmentedControlTab from 'react-native-segmented-control-ui'
 const ConsumerComponent extends Component {
 
     constructor(){
-      super()
-      this.state = {
-        selectedIndex: 0
-      };
+        super()
+        this.state = {
+            selectedIndex: 0
+        };
     }
 
     handleIndexChange = (index) => {
-      this.setState({
-        selectedIndex: index
-      });
+        this.setState({
+            selectedIndex: index
+        });
     }
 
     render() {
@@ -47,7 +47,7 @@ const ConsumerComponent extends Component {
 
 ## API
 
- Name | Description | Default | Type
+Name | Description | Default | Type
 ------|-------------|----------|-----------
 values | titles of tabs  | `['One', 'Two', 'Three']` | array
 selectedIndex | index of tab item to be selected initially| [0] | number
@@ -66,67 +66,66 @@ onTabPress | call-back function when a tab is selected | () => {} | func
 allowFontScaling | whether the segment & badge text should allow font scaling (default matches React Native default) | true | bool
 accessible | enables accessibility for each tab | true | bool
 accessibilityLabels | Reads out the given text on each tab press when voice over is enabled. If not set, uses the text passed in as values in props as a fallback | ['Label 1', 'Label 2', 'Label 3'] | array
+testIDs | Unique identifier for each tab which acts as a hook for functional test | ['Label 1', 'Label 2', 'Label 3'] | array
 
 
 ## Custom styling
-  ```javascript
-      <SegmentedControlTab tabsContainerStyle={styles.tabsContainerStyle}
-          tabStyle={styles.tabStyle}
-          tabTextStyle={styles.tabTextStyle}
-          activeTabStyle={styles.activeTabStyle}
-          activeTabTextStyle={styles.activeTabTextStyle}
-          selectedIndex={1}
-          allowFontScaling={false}
-          values={['First', 'Second', 'Third']}
-          onPress= {index => this.setState({selected:index})}
-          />
+    ```javascript
+        <SegmentedControlTab tabsContainerStyle={styles.tabsContainerStyle}
+            tabStyle={styles.tabStyle}
+            tabTextStyle={styles.tabTextStyle}
+            activeTabStyle={styles.activeTabStyle}
+            activeTabTextStyle={styles.activeTabTextStyle}
+            selectedIndex={1}
+            allowFontScaling={false}
+            values={['First', 'Second', 'Third']}
+            onPress= {index => this.setState({selected:index})}
+        />
 
-      const styles = StyleSheet.create({
-          tabsContainerStyle: {
-              backgroundColor: 'transparent',
-              flexDirection: 'row',
-          },
-          tabStyle: {
-              paddingVertical: 5,
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-              borderColor: '#0076FF',
-              borderWidth: 1,
-              backgroundColor: 'white',
-          },
-          activeTabStyle: {
-              backgroundColor: '#0076FF'
-          },
-          tabTextStyle: {
-              color: '#0076FF'
-          },
-          activeTabTextStyle: {
-              color: 'white'
-          },
-          tabBadgeContainerStyle: {
-              borderRadius: 20,
-              backgroundColor: 'red',
-              paddingLeft: 5,
-              paddingRight: 5,
-              marginLeft: 5,
-              marginBottom: 3
-          },
-          activeTabBadgeContainerStyle: {
-              backgroundColor: 'white'
-          },
-          tabBadgeStyle: {
-              color: 'white',
-              fontSize: 11,
-              fontWeight: 'bold'
-          },
-          activeTabBadgeStyle: {
-              color: 'black'
-          }
-
-      })
-
-  ```
+        const styles = StyleSheet.create({
+            tabsContainerStyle: {
+                backgroundColor: 'transparent',
+                flexDirection: 'row',
+            },
+            tabStyle: {
+                paddingVertical: 5,
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderColor: '#0076FF',
+                borderWidth: 1,
+                backgroundColor: 'white',
+            },
+            activeTabStyle: {
+                backgroundColor: '#0076FF'
+            },
+            tabTextStyle: {
+                color: '#0076FF'
+            },
+            activeTabTextStyle: {
+                color: 'white'
+            },
+            tabBadgeContainerStyle: {
+                borderRadius: 20,
+                backgroundColor: 'red',
+                paddingLeft: 5,
+                paddingRight: 5,
+                marginLeft: 5,
+                marginBottom: 3
+            },
+            activeTabBadgeContainerStyle: {
+                backgroundColor: 'white'
+            },
+            tabBadgeStyle: {
+                color: 'white',
+                fontSize: 11,
+                fontWeight: 'bold'
+            },
+            activeTabBadgeStyle: {
+                color: 'black'
+            }
+        })
+    ```
 
 ## Try it out
 

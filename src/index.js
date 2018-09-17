@@ -3,7 +3,7 @@ import { View, ViewPropTypes,  TouchableOpacity, StyleSheet,  Text } from 'react
 import PropTypes from 'prop-types'
 
 const handleTabPress = (index, selectedIndex, onTabPress) => {
-  selectedIndex !== index &&  onTabPress(index)
+    selectedIndex !== index &&  onTabPress(index)
 }
 
 const TabOption = ({
@@ -17,6 +17,7 @@ const TabOption = ({
     allowFontScaling,
     accessible,
     accessibilityLabel,
+    testID,
 }) => {
     return (
         <TouchableOpacity style={[
@@ -25,6 +26,7 @@ const TabOption = ({
             isTabActive ? [styles.activeTabStyle, activeTabStyle] : {},
             firstTabStyle,
             lastTabStyle]}
+            testID={testID}
             accessible={accessible}
             accessibilityLabel={accessibilityLabel}
             accessibilityTraits={isTabActive ? "selected" : "button"}
@@ -76,6 +78,7 @@ const SegmentedControlTab = ({
     allowFontScaling,
     accessible,
     accessibilityLabels,
+    testIDs
 }) => {
 
     const firstTabStyle = [{ borderLeftWidth: 0, borderTopWidth: 0}]
@@ -92,6 +95,7 @@ const SegmentedControlTab = ({
                         <TabOption
                             key={index}
                             index={index}
+                            testID={testIDs.length > 0 ? testIDs[index] : undefined}
                             badge={badges && badges[index] ? badges[index] : undefined}
                             isTabActive={selectedIndex === index}
                             text={item}
@@ -135,37 +139,40 @@ SegmentedControlTab.propTypes = {
     tabStyle: ViewPropTypes.style,
     tabTextStyle: Text.propTypes.style,
     tabsContainerStyle: ViewPropTypes.style,
+    testIDs: PropTypes.arrayOf(PropTypes.string),
     textNumberOfLines: PropTypes.number,
     values: PropTypes.arrayOf(PropTypes.string),
 }
 
 TabOption.propTypes = {
-  accessibilityLabel: PropTypes.string,
-  accessible: PropTypes.bool,
-  activeTabBadgeContainerStyle: Text.propTypes.style,
-  activeTabBadgeStyle: Text.propTypes.style,
-  activeTabStyle: ViewPropTypes.style,
-  activeTabTextStyle: Text.propTypes.style,
-  allowFontScaling: PropTypes.bool,
-  badge: PropTypes.number,
-  firstTabStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  index: PropTypes.number,
-  isTabActive: PropTypes.bool,
-  lastTabStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  onTabPress: PropTypes.func,
-  tabBadgeContainerStyle: Text.propTypes.style,
-  tabBadgeStyle: Text.propTypes.style,
-  tabStyle: ViewPropTypes.style,
-  tabTextStyle: Text.propTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  text: PropTypes.string,
-  textNumberOfLines: PropTypes.number,
+    accessibilityLabel: PropTypes.string,
+    accessible: PropTypes.bool,
+    activeTabBadgeContainerStyle: Text.propTypes.style,
+    activeTabBadgeStyle: Text.propTypes.style,
+    activeTabStyle: ViewPropTypes.style,
+    activeTabTextStyle: Text.propTypes.style,
+    allowFontScaling: PropTypes.bool,
+    badge: PropTypes.number,
+    firstTabStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+    index: PropTypes.number,
+    isTabActive: PropTypes.bool,
+    lastTabStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+    onTabPress: PropTypes.func,
+    tabBadgeContainerStyle: Text.propTypes.style,
+    tabBadgeStyle: Text.propTypes.style,
+    tabStyle: ViewPropTypes.style,
+    tabTextStyle: Text.propTypes.style,
+    tabsContainerStyle: ViewPropTypes.style,
+    testID: PropTypes.string,
+    text: PropTypes.string,
+    textNumberOfLines: PropTypes.number,
 }
 
 SegmentedControlTab.defaultProps = {
     values: ['One', 'Two', 'Three'],
     accessible: true,
     accessibilityLabels: [],
+    testIDs: [],
     badges: [],
     selectedIndex: 0,
     onTabPress: () => { },
