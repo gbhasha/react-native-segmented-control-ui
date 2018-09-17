@@ -1,2 +1,10 @@
 .nvmrc
+.babelrc
+.gitignore
+
+jest.config.js
+package-lock.json
+
 Example
+coverage
+src/__tests__/

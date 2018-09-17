@@ -8,10 +8,6 @@
     "orientation": "portrait",
     "primaryColor": "#cccccc",
     "githubUrl": "https://github.com/gbhasha/react-native-segmented-control-ui/tree/master/Example",
-    // "packagerOpts": {
-    //   "config": "./rn-cli.config.js",
-    //   "projectRoots": ""
-    // },
     "sdkVersion": "27.0.0"
   }
 }

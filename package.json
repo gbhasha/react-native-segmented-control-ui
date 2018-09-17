@@ -7,7 +7,7 @@
     "src/"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,14 @@
   },
   "homepage": "https://github.com/gbhasha/react-native-segmented-control-ui#readme",
   "peerDependencies": {},
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "babel-jest": "^23.4.2",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "^23.4.2"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-native": "^0.56.0",
+    "react-test-renderer": "^16.4.2"
+  }
 }

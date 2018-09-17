@@ -2,6 +2,9 @@
 #
 .DS_Store
 
+# testing
+coverage/
+
 # XDE
 .expo/
 
