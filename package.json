@@ -1,6 +1,6 @@
 {
   "name": "react-native-segmented-control-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Segmented Control component for React Native",
   "main": "src/index.js",
   "files": [
@@ -32,10 +32,7 @@
     "url": "https://github.com/gbhasha/react-native-segmented-control-ui/issues"
   },
   "homepage": "https://github.com/gbhasha/react-native-segmented-control-ui#readme",
-  "peerDependencies": {
-  },
-  "devDependencies": {
-  },
-  "dependencies": {
-  }
+  "peerDependencies": {},
+  "devDependencies": {},
+  "dependencies": {}
 }
