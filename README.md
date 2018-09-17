@@ -129,11 +129,21 @@ testIDs | Unique identifier for each tab which acts as a hook for functional tes
 
 ## Try it out
 
-You can try it out with Exponent [here](https://expo.io/@gbhasha/react-native-segmemted-control-ui).
+You can try it out with Exponent [here](https://expo.io/@gbhasha/react-native-segmented-control-ui).
 
 ### Example
 
 Look at the [`example`](https://github.com/gbhasha/react-native-segmented-control-ui/tree/master/Example) folder to run the expo app locally.
+
+## ScreenShots
+
+### Android
+
+![Demo](https://github.com/gbhasha/react-native-segmented-control-ui/blob/master/Example/screenshots/android-Nexus6p.png)
+
+### iOS
+
+![Demo](https://github.com/gbhasha/react-native-segmented-control-ui/blob/master/Example/screenshots/ios-iphone6.png)
 
 ## License
 *MIT*
