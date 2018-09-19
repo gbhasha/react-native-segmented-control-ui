@@ -3,11 +3,11 @@ import { View, ViewPropTypes, StyleSheet,  Text } from 'react-native'
 import PropTypes from 'prop-types'
 import TabOption from './TabOption'
 
-const handleTabPress = (index, selectedIndex, onTabPress) => {
-  selectedIndex !== index &&  onTabPress(index)
+export const handleTabPress = (index, selectedIndex, onTabPress) => {
+    selectedIndex !== index &&  onTabPress(index)
 }
 
-const getAccessibilityLabelByIndex = (accessibilityLabels, index) => {
+export const getAccessibilityLabelByIndex = (accessibilityLabels, index) => {
     return accessibilityLabels && accessibilityLabels.length > 0 && accessibilityLabels[index] ?  accessibilityLabels[index] : undefined
 }
 
@@ -67,56 +67,60 @@ const SegmentedControlTab = ({
 }
 
 SegmentedControlTab.propTypes = {
-  accessibilityLabels: PropTypes.arrayOf(PropTypes.string),
-  accessible: PropTypes.bool,
-  activeTabBadgeContainerStyle: Text.propTypes.style,
-  activeTabBadgeStyle: Text.propTypes.style,
-  activeTabStyle: ViewPropTypes.style,
-  activeTabTextStyle: Text.propTypes.style,
-  allowFontScaling: PropTypes.bool,
-  badges: PropTypes.arrayOf(PropTypes.number),
-  borderRadius: PropTypes.number,
-  onTabPress: PropTypes.func,
-  selectedIndex: PropTypes.number,
-  tabBadgeContainerStyle: Text.propTypes.style,
-  tabBadgeStyle: Text.propTypes.style,
-  tabStyle: ViewPropTypes.style,
-  tabTextStyle: Text.propTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  testIDs: PropTypes.arrayOf(PropTypes.string),
-  textNumberOfLines: PropTypes.number,
-  values: PropTypes.arrayOf(PropTypes.string),
+    accessibilityLabels: PropTypes.arrayOf(PropTypes.string),
+    accessible: PropTypes.bool,
+    activeTabBadgeContainerStyle: Text.propTypes.style,
+    activeTabBadgeStyle: Text.propTypes.style,
+    activeTabStyle: ViewPropTypes.style,
+    activeTabTextStyle: Text.propTypes.style,
+    allowFontScaling: PropTypes.bool,
+    badges: PropTypes.arrayOf(
+        PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+        ])),
+    borderRadius: PropTypes.number,
+    onTabPress: PropTypes.func,
+    selectedIndex: PropTypes.number,
+    tabBadgeContainerStyle: Text.propTypes.style,
+    tabBadgeStyle: Text.propTypes.style,
+    tabStyle: ViewPropTypes.style,
+    tabTextStyle: Text.propTypes.style,
+    tabsContainerStyle: ViewPropTypes.style,
+    testIDs: PropTypes.arrayOf(PropTypes.string),
+    textNumberOfLines: PropTypes.number,
+    values: PropTypes.arrayOf(PropTypes.string),
 }
 
 SegmentedControlTab.defaultProps = {
-  values: ['One', 'Two', 'Three'],
-  accessible: true,
-  accessibilityLabels: [],
-  testIDs: [],
-  badges: [],
-  selectedIndex: 0,
-  onTabPress: () => { },
-  tabsContainerStyle: {},
-  tabStyle: {},
-  activeTabStyle: {},
-  tabTextStyle: {},
-  activeTabTextStyle: {},
-  tabBadgeContainerStyle: {},
-  activeTabBadgeContainerStyle: {},
-  tabBadgeStyle: {},
-  activeTabBadgeStyle: {},
-  borderRadius: 5,
-  textNumberOfLines: 1,
-  allowFontScaling: true,
+    values: ['One', 'Two', 'Three'],
+    accessible: true,
+    accessibilityLabels: [],
+    testIDs: [],
+    badges: [],
+    selectedIndex: 0,
+    onTabPress: () => { },
+    tabsContainerStyle: {},
+    tabStyle: {},
+    activeTabStyle: {},
+    tabTextStyle: {},
+    activeTabTextStyle: {},
+    tabBadgeContainerStyle: {},
+    activeTabBadgeContainerStyle: {},
+    tabBadgeStyle: {},
+    activeTabBadgeStyle: {},
+    borderRadius: 5,
+    textNumberOfLines: 1,
+    allowFontScaling: true,
 }
 
 const styles = StyleSheet.create({
-  tabsContainerStyle: {
-      backgroundColor: 'transparent',
-      flexDirection: 'row',
-      borderColor: '#007AFF',
-      borderWidth: 1,
-  },
+    tabsContainerStyle: {
+        backgroundColor: 'transparent',
+        flexDirection: 'row',
+        borderColor: '#007AFF',
+        borderWidth: 1,
+    },
 })
 
 export default SegmentedControlTab

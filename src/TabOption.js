@@ -40,7 +40,7 @@ const TabOption = ({
                     {text}
                 </Text>
                 {
-                    badge ?
+                    badge !== undefined &&
                         <View style={[
                             styles.tabBadgeContainerStyle,
                             tabBadgeContainerStyle,
@@ -52,7 +52,7 @@ const TabOption = ({
                                 allowFontScaling={allowFontScaling}>
                                 {badge}
                             </Text>
-                        </View> : false
+                        </View>
                 }
             </View>
         </TouchableOpacity>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`TabOption renders correctly 1`] = `
 <View
   accessibilityComponentType="button"
   accessibilityTraits="button"
@@ -46,4 +46,188 @@ exports[`renders correctly 1`] = `
     />
   </View>
 </View>
+`;
+
+exports[`TabOption should apply the passed badgeStyle when tab is active  1`] = `
+<TouchableOpacity
+  accessibilityComponentType="button"
+  accessibilityTraits="selected"
+  activeOpacity={1}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderLeftColor": "#007AFF",
+        "borderLeftWidth": 1,
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 5,
+      },
+      undefined,
+      Array [
+        Object {
+          "backgroundColor": "#007AFF",
+        },
+        Object {
+          "backgroundColor": "#0000FF",
+        },
+      ],
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#007AFF",
+          },
+          undefined,
+          Array [
+            Object {
+              "color": "white",
+            },
+            undefined,
+          ],
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "red",
+            "borderRadius": 20,
+            "marginBottom": 3,
+            "marginLeft": 5,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+          },
+          undefined,
+          Array [
+            Object {
+              "backgroundColor": "white",
+            },
+            Object {
+              "backgroundColor": "#00FFFF",
+            },
+          ],
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 11,
+              "fontWeight": "bold",
+            },
+            undefined,
+            Array [
+              Object {
+                "color": "black",
+              },
+              Object {
+                "color": "#CCCCCC",
+              },
+            ],
+          ]
+        }
+      >
+        5
+      </Text>
+    </View>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`TabOption should render the badge along with tab text when badge is passed in props  1`] = `
+<TouchableOpacity
+  accessibilityComponentType="button"
+  accessibilityTraits="button"
+  activeOpacity={1}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderLeftColor": "#007AFF",
+        "borderLeftWidth": 1,
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingVertical": 5,
+      },
+      undefined,
+      Object {},
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#007AFF",
+          },
+          undefined,
+          Object {},
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "red",
+            "borderRadius": 20,
+            "marginBottom": 3,
+            "marginLeft": 5,
+            "paddingLeft": 5,
+            "paddingRight": 5,
+          },
+          undefined,
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 11,
+              "fontWeight": "bold",
+            },
+            undefined,
+            Object {},
+          ]
+        }
+      >
+        5
+      </Text>
+    </View>
+  </View>
+</TouchableOpacity>
 `;
