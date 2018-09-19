@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "8.11.2"
+# install: true  (this will run npm install command)
+install:
+  - npm install
+# script: true  (this will run npm test command)
+scripts:
+  - npm run test
