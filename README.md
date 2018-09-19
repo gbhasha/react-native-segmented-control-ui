@@ -4,6 +4,7 @@
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square )](https://github.com/gbhasha/react-native-segmented-control-ui/pulls)
 [![Build Status](https://travis-ci.org/gbhasha/react-native-segmented-control-ui.svg?branch=master)](https://travis-ci.org/gbhasha/react-native-segmented-control-ui)
 [![codecov](https://codecov.io/gh/gbhasha/react-native-segmented-control-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/gbhasha/react-native-segmented-control-ui)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/079cec8db0c34a7fabe41011eab8483d)](https://www.codacy.com/app/gbhasha/react-native-segmented-control-ui?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gbhasha/react-native-segmented-control-ui&amp;utm_campaign=Badge_Grade)
 
 [![NPM](https://nodei.co/npm/react-native-segmented-control-ui.png?compact=true)](https://npmjs.org/package/react-native-segmented-control-ui)
 
