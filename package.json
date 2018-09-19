@@ -7,7 +7,8 @@
     "src/"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:report": "cat ./coverage/lcov.info | codecov && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "babel-jest": "^23.4.2",
     "babel-preset-react-native": "^4.0.0",
+    "codecov": "^3.1.0",
     "jest": "^23.4.2",
     "jest-react-native": "^18.0.0"
   },

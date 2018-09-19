@@ -7,3 +7,5 @@ install:
 # script: true  (this will run npm test command)
 scripts:
   - npm run test
+after_success:
+  - npm run test:report
