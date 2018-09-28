@@ -1,4 +1,5 @@
 # react-native-segmented-control-ui(for Android/iOS) 🚀
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d360c6076f314716b4328447f9375a71)](https://app.codacy.com/app/gbhasha/react-native-segmented-control-ui?utm_source=github.com&utm_medium=referral&utm_content=gbhasha/react-native-segmented-control-ui&utm_campaign=Badge_Grade_Settings)
 [![npm](https://img.shields.io/npm/v/react-native-segmented-control-ui.svg?style=flat-square "npm version")](https://www.npmjs.com/package/react-native-segmented-control-ui)
 [![Monthly Downloads](https://img.shields.io/npm/dm/react-native-segmented-control-ui.svg?style=flat-square )](https://npmjs.org/package/react-native-segmented-control-ui)
 [ ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square )](https://github.com/gbhasha/react-native-segmented-control-ui/pulls)
