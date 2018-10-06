@@ -73,69 +73,44 @@ testIDs | Unique identifier for each tab which acts as a hook for functional tes
 
 ## Custom styling
     ```javascript
-        <SegmentedControlTab tabsContainerStyle={styles.tabsContainerStyle}
-            tabStyle={styles.tabStyle}
-            tabTextStyle={styles.tabTextStyle}
-            activeTabStyle={styles.activeTabStyle}
-            activeTabTextStyle={styles.activeTabTextStyle}
-            selectedIndex={1}
-            allowFontScaling={false}
-            values={['First', 'Second', 'Third']}
-            onPress= {index => this.setState({selected:index})}
+        <SegmentedControlTab
+          tabsContainerStyle={styles.tabsContainerStyle}
+          tabStyle={styles.tabStyle}
+          tabTextStyle={styles.tabTextStyle}
+          activeTabStyle={styles.activeTabStyle}
+          activeTabTextStyle={styles.activeTabTextStyle}
+          selectedIndex={1}
+          allowFontScaling={false}
+          values={['First', 'Second', 'Third']}
+          onPress={this.handleIndexChange}
         />
 
         const styles = StyleSheet.create({
             tabsContainerStyle: {
-                backgroundColor: 'transparent',
-                flexDirection: 'row',
-            },
-            tabStyle: {
-                paddingVertical: 5,
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderColor: '#0076FF',
-                borderWidth: 1,
-                backgroundColor: 'white',
-            },
-            activeTabStyle: {
-                backgroundColor: '#0076FF'
-            },
-            tabTextStyle: {
-                color: '#0076FF'
-            },
-            activeTabTextStyle: {
-                color: 'white'
-            },
-            tabBadgeContainerStyle: {
-                borderRadius: 20,
-                backgroundColor: 'red',
-                paddingLeft: 5,
-                paddingRight: 5,
-                marginLeft: 5,
-                marginBottom: 3
-            },
-            activeTabBadgeContainerStyle: {
-                backgroundColor: 'white'
-            },
-            tabBadgeStyle: {
-                color: 'white',
-                fontSize: 11,
-                fontWeight: 'bold'
-            },
-            activeTabBadgeStyle: {
-                color: 'black'
-            }
+            borderColor: '#706fd3'
+        },
+        tabStyle: {
+            borderLeftColor: '#706fd3',
+            backgroundColor: 'transparent',
+        },
+        activeTabStyle: {
+            backgroundColor: '#33d9b2'
+        },
+        tabTextStyle: {
+            color: '#706fd3'
+        },
         })
     ```
 
-## Try it out
 
-You can try it out with Exponent [here](https://expo.io/@gbhasha/react-native-segmented-control-ui).
+## Try it out
+You can try it out default example online using [`Expo Snack`](https://snack.expo.io/@gbhasha/example-of-react-native-segmented-control-ui)
+
+You can try it out custom styling example online using [`Expo Snack`](https://snack.expo.io/@gbhasha/custom-styling-of-react-native-segmented-control-ui)
 
 ### Example
 
-Look at the [`example`](https://github.com/gbhasha/react-native-segmented-control-ui/tree/master/Example) folder to run the expo app locally.
+Look at the full example code at [`/Example`](/Example) folder to run the expo app locally. or try with Exponent App [here](https://expo.io/@gbhasha/react-native-segmented-control-ui).
 
 ## ScreenShots
 
