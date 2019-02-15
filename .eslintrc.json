@@ -1,12 +1,27 @@
 {
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
     "extends": [
-        "standard",
-        "standard-react"
+        "eslint:recommended",
+        "plugin:react/recommended"
     ],
     "env": {
         "browser": true,
         "node": true,
         "jest": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     },
     "rules": {
         "no-underscore-dangle": 0

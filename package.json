@@ -10,8 +10,12 @@
     "lint": "eslint src/**/*.js",
     "lintfix": "eslint --fix src/**/*.js",
     "test": "jest",
-    "test:report": "cat ./coverage/lcov.info | codecov && rm -rf ./coverage"
+    "test:report": "cat ./coverage/lcov.info | codecov && rm -rf ./coverage",
+    "pre-commit": "npm run lint && npm test"
   },
+  "pre-commit": [
+    "pre-commit"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gbhasha/react-native-segmented-control-ui.git"
@@ -37,23 +41,21 @@
   "homepage": "https://github.com/gbhasha/react-native-segmented-control-ui#readme",
   "peerDependencies": {},
   "devDependencies": {
-    "babel-jest": "^23.4.2",
-    "babel-preset-react-native": "^4.0.0",
-    "codecov": "^3.1.0",
-    "eslint": "^5.6.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-config-standard-react": "^7.0.2",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "jest": "^23.4.2",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-react-native": "^4.0.1",
+    "codecov": "^3.2.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.6.0",
+    "jest": "^23.6.0",
     "jest-react-native": "^18.0.0",
-    "react-test-renderer": "^16.4.2"
+    "pre-commit": "^1.2.2",
+    "react-test-renderer": "^16.8.2"
   },
   "dependencies": {
-    "react": "^16.6.3",
+    "react": "^16.8.2",
     "react-native": "^0.58.4"
   }
 }
