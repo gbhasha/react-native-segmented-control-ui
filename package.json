@@ -11,7 +11,9 @@
     "lintfix": "eslint --fix src/**/*.js",
     "test": "jest",
     "test:report": "cat ./coverage/lcov.info | codecov && rm -rf ./coverage",
-    "pre-commit": "npm run lint && npm test"
+    "pre-commit": "npm run lint && npm test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "pre-commit"
@@ -56,6 +58,8 @@
   },
   "dependencies": {
     "react": "^16.8.2",
-    "react-native": "^0.60.0"
-  }
+    "react-native": "^0.60.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
