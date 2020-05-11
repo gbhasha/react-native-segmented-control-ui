@@ -9,16 +9,19 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "reset": "watchman watch-del-all && rm -rf ~/.rncache/ && rm -rf node_modules && npm install && rm -rf /tmp/haste-map-react-native-packager-* && rm -rf /tmp/metro-bundler-cache-* && rm -rf $TMPDIR/react-* && npm start -- --reset-cache"
+    "reset": "watchman watch-del-all && rm -rf ~/.rncache/ && rm -rf node_modules && npm install && rm -rf /tmp/haste-map-react-native-packager-* && rm -rf /tmp/metro-bundler-cache-* && rm -rf $TMPDIR/react-* && npm start -- --reset-cache",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
     "expo": "^27.0.1",
-    "react": "16.3.1",
+    "react": "16.13.1",
     "react-native": "^0.57.0",
-    "react-native-segmented-control-ui": "^1.0.3"
+    "react-native-segmented-control-ui": "^1.0.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.1.1",
@@ -28,5 +31,6 @@
     "jest-expo": "~27.0.0",
     "react-native-scripts": "^1.14.1",
     "react-test-renderer": "16.3.1"
-  }
+  },
+  "snyk": true
 }
