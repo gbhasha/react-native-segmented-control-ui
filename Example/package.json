@@ -19,7 +19,7 @@
   "dependencies": {
     "expo": "^27.0.1",
     "react": "16.13.1",
-    "react-native": "^0.57.0",
+    "react-native": "^0.64.0",
     "react-native-segmented-control-ui": "^1.0.3",
     "snyk": "^1.316.1"
   },
